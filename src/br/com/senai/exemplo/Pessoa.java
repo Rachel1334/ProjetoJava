@@ -1,4 +1,4 @@
-package br.com.senai;
+package br.com.senai.exemplo;
 
 import org.omg.CORBA.PUBLIC_MEMBER;
 
@@ -28,7 +28,12 @@ public class Pessoa {
 		return sexo; 
 	}
 	public void setSexo(String sexo) {
-		this.sexo = sexo;
+		this.sexo = sexo;		
+	}
+
+	@Override
+	public String toString() {
+		return "Pessoa [nome=" + nome + ", anoDeNascimento=" + anoDeNascimento + ", sexo=" + sexo + "]";
 	}
 	
 }
