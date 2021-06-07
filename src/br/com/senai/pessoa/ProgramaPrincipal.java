@@ -1,10 +1,42 @@
-package br.com.senai.pessoa;
+	package br.com.senai.pessoa;
 
-public class ProgramaPrincipal {
+	import java.util.ArrayList;
+	import java.util.List;
+	
+	public class ProgramaPrincipal {
+
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		List<Pessoa> pessoas = new ArrayList<>();
+		
+		PessoaController pessoaController = new PessoaController();
+		
+		boolean sair = false;
+		
+		do {
+			pessoaController.menu();
+			
+			int opcao = pessoaController.leopcao();
+			switch(opcao) {
+				case 1:
+					pessoas.add(pessoaController.cadastrarPessoa());
+					break;
+					
+				case 2:
+					pessoaController.listarPessoas(pessoas);
+					break;
 
-	}
-
+				case 9:
+					sair = true;
+					break;
+			default:
+				System.out.println("Opção invalida! ");
+				break;
+			}
+			
+		}while(!sair);
+		
+		System.out.println("Sistema finalizado!");
+		
+	}	
 }
