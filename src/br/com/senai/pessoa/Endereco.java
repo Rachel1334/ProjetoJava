@@ -1,31 +1,42 @@
 package br.com.senai.pessoa;
 
-public class Endereco {
+public class Endereco extends Cidade {
 	
-	private String cidade;
-	private String estado;
-	private String pais;
+	private String Endereço;
+	private String NomeDoBairro;
+	private String NomeDaRua;
+	private String Complemento;
+	private String Numero;
+	public String getEndereço() {
+		return Endereço;
+	}
+	public void setEndereço(String endereço) {
+		Endereço = endereço;
+	}
+	public String getNomeDoBairro() {
+		return NomeDoBairro;
+	}
+	public void setNomeDoBairro(String nomeDoBairro) {
+		NomeDoBairro = nomeDoBairro;
+	}
+	public String getNomeDaRua() {
+		return NomeDaRua;
+	}
+	public void setNomeDaRua(String nomeDaRua) {
+		NomeDaRua = nomeDaRua;
+	}
+	public String getComplemento() {
+		return Complemento;
+	}
+	public void setComplemento(String complemento) {
+		Complemento = complemento;
+	}
+	public String getNumero() {
+		return Numero;
+	}
+	public void setNumero(String numero) {
+		Numero = numero;
+	}
 	
 	
-	public String getCidade() {
-		return cidade;
-	}
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
-	}
-	public String getEstado() {
-		return estado;
-	}
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
-	public String getPais() {
-		return pais;
-	}
-	public void setPais(String pais) {
-		this.pais = pais;
-	}
-	
-	
-
 }
