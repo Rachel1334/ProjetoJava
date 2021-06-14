@@ -17,9 +17,11 @@ public class PessoaController {
 	
 	public void menu() {
 		System.out.println("\n---MENU---");
-		System.out.println("1)cadastrar pessoa");
+		System.out.println("1) Cadastrar pessoa");
 		System.out.println("2) Listar pessoas cadastradas");
-		System.out.println("9)Sair do sistema");
+		System.out.println("3) Cadastrar produtos");
+		System.out.println("4) Listar produtos cadastrados");
+		System.out.println("9) Sair do sistema");
 		System.out.println("--------------------");
 
 	}
