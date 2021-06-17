@@ -42,6 +42,9 @@ import br.com.senai.produto.ProdutoController;
 					produtoConroller.listarProdutos(produtos);
 					break;
 					
+				case 5: 
+					produtoConroller.editarProduto(produtos);
+					break;
 				case 9:
 					sair = true;
 					break;
