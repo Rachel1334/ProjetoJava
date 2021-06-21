@@ -42,6 +42,14 @@ public class Pessoa  extends Endereco{
 	public void setAltura(double altura) {
 		this.altura = altura;
 	}
+	public void setAnoDeNascimento(String next) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void setAltura(String next) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 }

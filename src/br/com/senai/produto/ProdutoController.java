@@ -35,18 +35,23 @@ public class ProdutoController {
 		produto.setValorUnitarioProduto(tec.nextDouble());
 		
 		System.out.println("Informe a quantidade do produto: ");
-		produto.setQuantidadeDoPrdoduto(tec.nextInt());
+		produto.setQuantidadeDoPrdoduto(tec.nextDouble());
 		
 		produto.setValorTotalDoProduto(produto.getValorUnitarioProduto() * produto.getQuantidadeDoPrdoduto());
 		return produto;
 	}
 	   	public List<Produto> listarProdutos(List<Produto> produtos) {
+	   		
+	   		if(produtos.isEmpty()) {
+	   			System.out.println("Não possui produtos para listar");
+	   			return null;
+	   		}
 	   	 
 	   		System.out.printf(" %2s |%10s | %13s | %20s | %10s\n", 
 	   				"Id" , "Nome" , "Valor unitário" , "Quantidade do produto" , "Valor total do produto");
 			for(int i = 0; i<produtos.size(); i++) {
 				System.out.printf("%2d |%10s | %13s | %20s | %10s|\n",
-				i,
+				i + 1,
 				produtos.get(i).getNomeDoPrdoduto(),
 				produtos.get(i).getValorUnitarioProduto(),
 				produtos.get(i).getQuantidadeDoPrdoduto(),
@@ -56,10 +61,15 @@ public class ProdutoController {
 	   	return produtos;	
  	}
 	   	public List <Produto> editarProduto(List<Produto> produtos) {
+	   		
 	   		Produto produto = new Produto();
 	   		listarProdutos(produtos);
-	   		System.out.println("Informe o Id do produto para ser editar: ");
-	   		int idProduto = tec.nextInt();
+	   		
+	   		if(produtos.isEmpty()) {
+	   			return null;
+	   		}
+	   		System.out.println("Informe o Id do produto para editar: ");
+	   		int idProduto = tec.nextInt() - 1;
 	   		
 	   		System.out.println("1) Nome do produto");
 	   		System.out.println("2) Quantidade do produto");
@@ -93,6 +103,8 @@ public class ProdutoController {
 	   				break;
 	   			case 3:
 	   				System.out.println("--- Editar o valor uitário de produto ---");
+	   				System.out.println("");
+	   				
                     break;
 	   			default:
 	   				System.out.println("opção inválida!");
@@ -101,6 +113,32 @@ public class ProdutoController {
 	   	return produtos;	
  	}
 	   	
-}
+	   	public void excluirProduto(List<Produto>produtos) {
+	   		listarProdutos(produtos);
+	   		
+	   		if(produtos.isEmpty()) {
+	   			
+	   			return;
+	   		}
+		System.out.println("-----Excluir Produto-----");
+		
+		System.out.println("Informe o Id de produto para excluir:");
+		int idProduto = tec.nextInt() - 1;
+		
+		if(produtos.size() <= idProduto) {
+			System.out.println("Produto não cadastrado.");
+			return;
+		}
+		produtos.remove(idProduto);
+		
+	}
+
+		
+		}
+
+	
+		
+	   	
+
 
 

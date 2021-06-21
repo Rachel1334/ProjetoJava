@@ -5,7 +5,7 @@ public class Produto {
 	//ATRIBUTOS
 	private String nomeDoPrododuto;
 	private double valorUnitarioProduto;
-	private int quantidadeDoPrdoduto;
+	private double quantidadeDoPrdoduto;
 	private double valorTotalDoProduto;
 	
 	//CONSTRUTOR
@@ -34,16 +34,26 @@ public class Produto {
 		this.valorUnitarioProduto = valorUnitarioProduto;
 	}
 	public int getQuantidadeDoPrdoduto() {
-		return quantidadeDoPrdoduto;
+		return (int) quantidadeDoPrdoduto;
 	}
-	public void setQuantidadeDoPrdoduto(int quantidadeDoPrdoduto) {
-		this.quantidadeDoPrdoduto = quantidadeDoPrdoduto;
+	public void setQuantidadeDoPrdoduto(double String) {
+		this.quantidadeDoPrdoduto = String;
 	}
 	public double getValorTotalDoProduto() {
 		return valorTotalDoProduto;
 	}
 	public void setValorTotalDoProduto(double valorTotalDoProduto) {
 		this.valorTotalDoProduto = valorTotalDoProduto;
+	}
+
+	public void setQuantidadeDoPrdoduto(int quantidadeDoPrdoduto2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setQuantidadeDoPrdoduto(String next) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	
