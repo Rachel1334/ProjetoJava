@@ -4,6 +4,8 @@ package br.com.senai;
 	import java.util.ArrayList;
 	import java.util.List;
 
+import br.com.senai.loja.Venda;
+import br.com.senai.loja.VendaController;
 import br.com.senai.pessoa.Pessoa;
 import br.com.senai.pessoa.PessoaController;
 import br.com.senai.produto.Produto;
@@ -15,6 +17,7 @@ import br.com.senai.produto.ProdutoController;
 	public static void main(String[] args) {
 		List<Pessoa> pessoas = new ArrayList<>();
 		List<Produto> produtos = new ArrayList<Produto>();
+		List<Venda> vendas = new ArrayList<Venda>();
 		
 		Produto produto = new Produto(
 				"Abacate",
@@ -27,9 +30,10 @@ import br.com.senai.produto.ProdutoController;
 		
 		PessoaController pessoaController = new PessoaController();
 		ProdutoController produtoConroller = new ProdutoController();
+		VendaController vendaController = new VendaController();
 		
 		boolean sair = false;
-		
+	
 		do {
 			pessoaController.menu();
 			
@@ -46,40 +50,19 @@ import br.com.senai.produto.ProdutoController;
 				case 3:
 					pessoaController.editarPessoa(pessoas);
 					break;
-					
-				case 4:
-					pessoaController.excluirPessoa(pessoas);
-					break;
-					
-				case 5:
-					produtos.add(produtoConroller.cadastrarProduto());
-					break;
-					
-				case 6:
-					produtoConroller.listarProdutos(produtos);
-					break;
-					
-				case 7: 
-					produtoConroller.editarProduto(produtos);
-					break;
-					
-				case 8:
-					produtoConroller.excluirProduto(produtos);
-					break;
-					
-				case 9:
-					sair = true;
-					break;
-					
-					
+				
 			default:
 				System.out.println("Opção invalida! ");
 				break;
 			}
 			
-		}while(!sair);
+			}while(!sair);
 		
 		System.out.println("Sistema finalizado!");
 		
 	}	
 }
+		
+	
+	
+	

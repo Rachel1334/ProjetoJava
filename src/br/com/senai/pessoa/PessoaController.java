@@ -17,18 +17,26 @@ public class PessoaController {
 		return tec.nextInt();
 	}
 	
-	public void menu() {
-		System.out.println("\n---MENU---");
-		System.out.println("1) Cadastrar pessoa");
-		System.out.println("2) Listar pessoas cadastradas");
-		System.out.println("3) Editar pessoa");
-		System.out.println("4) Excluir pessoa");
-		System.out.println("5) Cadastrar produtos");
-		System.out.println("6) Listar produtos cadastrados");
-		System.out.println("7) Editar produto");
-		System.out.println("8) Excluir produto");
-		System.out.println("9) Sair do sistema");
-		System.out.println("--------------------");
+	public void menu(){
+		System.out.println("-----MENU PRINCIPAL-----");
+		System.out.println("1)--Pessoa--");
+		System.out.println("2)--Produto--");
+		System.out.println("3)--Venda--");
+		System.out.println("4)--Sair do Sistema--");
+		
+		//System.out.println("\n---MENU---");
+		//System.out.println("1) Cadastrar pessoa");
+		//System.out.println("2) Listar pessoas cadastradas");
+		//System.out.println("3) Editar pessoa");
+		//System.out.println("4) Excluir pessoa");
+		//System.out.println("5) Cadastrar produtos");
+		//System.out.println("6) Listar produtos cadastrados");
+		//System.out.println("7) Editar produto");
+		//System.out.println("8) Excluir produto");
+		//System.out.println("9) Sair do sistema");
+		//System.out.println("10) Listar vendas");
+		//System.out.println("11) Cadatrar venda");
+		//System.out.println("--------------------");
 
 	}
 	
@@ -316,7 +324,15 @@ public class PessoaController {
 		}
 		pessoas.remove(idPessoa);
 		
-		
-			
 		}
+	 	
+	 	public void primerio() {
+	 	System.out.printf("----MENU----");
+		System.out.println("1)Cadastrar Pessoa");	
+		System.out.println("2)Listar pessoas cadastrados");
+		System.out.println("3)Editar pessoas");
+		System.out.println("4)Excluir pessoa");
+		
+		
+	 	}
 }

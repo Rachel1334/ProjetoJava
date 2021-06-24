@@ -2,11 +2,13 @@ package br.com.senai.produto;
 import java.util.List;
 import java.util.Scanner;
 
-import br.com.senai.pessoa.Pessoa;
-
 public class ProdutoController {
 
+	private static final int Menu = 0;
+	private static final ProdutoController produtoConroller = null;
 	private Scanner tec;
+	private ProdutoController pessoaController;
+	private List<Produto> produtos;
 	
 	public ProdutoController( ) {
 		tec = new Scanner(System.in);
@@ -16,14 +18,8 @@ public class ProdutoController {
 		System.out.println("> ");
 		return tec.nextInt();
 	}
-	public void menu() {
-		System.out.println("\n---MENU---");
-		System.out.println("3)cadastrar produto");
-		System.out.println("4) Listar produto cadastradas");
-		System.out.println("9)Sair do sistema");
-		System.out.println("--------------------");
-	}	
 	
+ 	
 	public Produto cadastrarProduto() {
 		Produto produto = new Produto();
 		
@@ -130,11 +126,37 @@ public class ProdutoController {
 			return;
 		}
 		produtos.remove(idProduto);
+	   	}
+	   	
 		
-	}
+	   	public void segundo() {
+			System.out.printf("----MENU----");
+			System.out.println("1)Cadastrar produtos");	
+			System.out.println("2)Listar produtos cadastrados");
+			System.out.println("3)Editar produto");
+			System.out.println("4)Excluir produto");
+			
+			int opcao = 0;
+		switch(opcao) {
+			case 1:
+				produtos.add(produtoConroller.cadastrarProduto());
+				break;
+			case 2:
+				produtoConroller.listarProdutos(produtos);
+				break;
+			case 3:
+				produtoConroller.editarProduto(produtos);
+				break;
+			case 4:
+				produtoConroller.excluirProduto(produtos);
+				break;
 
-		
-		}
+			}
+						  
+	
+	   	}
+}
+
 
 	
 		
