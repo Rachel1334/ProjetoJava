@@ -35,20 +35,28 @@ import br.com.senai.produto.ProdutoController;
 		boolean sair = false;
 	
 		do {
-			pessoaController.menu();
+			
+			
+				System.out.println("-----MENU PRINCIPAL-----");
+				System.out.println("1)--Pessoa--");
+				System.out.println("2)--Produto--");
+				System.out.println("3)--Venda--");
+				System.out.println("4)--Sair do Sistema--");
+				
+			
 			
 			int opcao = pessoaController.leopcao();
 			switch(opcao) {
 				case 1:
-					pessoas.add(pessoaController.cadastrarPessoa());
+					pessoaController.menu1(pessoas);
 					break;
 					
 				case 2:
-					pessoaController.listarPessoas(pessoas);
+					produtoConroller.menu2(produtos);
 					break;
 					
 				case 3:
-					pessoaController.editarPessoa(pessoas);
+					vendaController.menu3(pessoas, produtos, vendas);
 					break;
 				
 			default:

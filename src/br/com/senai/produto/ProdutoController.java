@@ -129,13 +129,13 @@ public class ProdutoController {
 	   	}
 	   	
 		
-	   	public void segundo() {
+	   	public void menu2(List<Produto> produtos) {
 			System.out.printf("----MENU----");
 			System.out.println("1)Cadastrar produtos");	
 			System.out.println("2)Listar produtos cadastrados");
 			System.out.println("3)Editar produto");
 			System.out.println("4)Excluir produto");
-			
+			System.out.println("5)Sair do Sistema");
 			int opcao = 0;
 		switch(opcao) {
 			case 1:
@@ -152,7 +152,7 @@ public class ProdutoController {
 				break;
 
 			}
-						  
+			
 	
 	   	}
 }

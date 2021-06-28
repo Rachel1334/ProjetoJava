@@ -45,7 +45,8 @@ public class VendaController {
 		 }
 		return vendas;
 	}
-	public Venda cadastrarVenda(List<Produto> produtos, List<Pessoa> pessoas) {
+	public Venda cadastrarVenda(List<Produto>produtos,List<Pessoa>pessoas) {
+		
 		
 		if(produtos.isEmpty() || pessoas.isEmpty()) {
 			System.out.println("Impossível cadastrar vendas sem PRODUTOS ou PESSOAS cadastradas.");
@@ -84,16 +85,29 @@ public class VendaController {
 		return venda;
 	
 	}
-	public void terceiro() {
+	public void menu3(List<Pessoa> pessoas,List<Produto> produtos,List<Venda> vendas) {
 		System.out.println("-----MENU-----");
 		System.out.println("1)CADASTRAR");
 		System.out.println("2)LISTAR");
-						  
-}
-	//switch() {
+					
+			int opcao = 0;
+			switch(opcao) {
+			case 1:
+					vendas.add(cadastrarVenda(produtos,pessoas));			
+					break;
+			case 2:
+					listarVenda(vendas);
+					break;
+			default:
+				System.out.println("Opção ivaida!");
+				break;
+			}
+		}
 	
-	
-	}
+			}
+			
+			
 
-	
+
+
 

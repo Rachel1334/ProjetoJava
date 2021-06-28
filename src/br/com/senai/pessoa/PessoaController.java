@@ -6,23 +6,19 @@ import br.com.senai.produto.Produto;
 
 public class PessoaController {
 
-	private Scanner tec;
+	private static final List<Pessoa> pessoas = null;
+	private static Scanner tec;
 	
 	public PessoaController() {
 		tec = new Scanner(System.in);
 	}
 
-	public int leopcao() {
+	public static int leopcao() {
 		System.out.println("> ");
 		return tec.nextInt();
 	}
 	
-	public void menu(){
-		System.out.println("-----MENU PRINCIPAL-----");
-		System.out.println("1)--Pessoa--");
-		System.out.println("2)--Produto--");
-		System.out.println("3)--Venda--");
-		System.out.println("4)--Sair do Sistema--");
+	
 		
 		//System.out.println("\n---MENU---");
 		//System.out.println("1) Cadastrar pessoa");
@@ -38,9 +34,9 @@ public class PessoaController {
 		//System.out.println("11) Cadatrar venda");
 		//System.out.println("--------------------");
 
-	}
 	
-	public Pessoa cadastrarPessoa() {
+	
+	public static Pessoa cadastrarPessoa() {
 		Pessoa pessoa = new Pessoa();
 		
 		System.out.println("--- Cadastrar pessoa--- ");
@@ -80,7 +76,7 @@ public class PessoaController {
 		return pessoa;
 	}
 		
-		public List<Pessoa> listarPessoas(List<Pessoa> pessoas){
+		public static List<Pessoa> listarPessoas(List<Pessoa> pessoas){
 			
 			if(pessoas.isEmpty()) {
 				   ///.size() <= 0) OU USA ESSE
@@ -110,7 +106,7 @@ public class PessoaController {
 		return pessoas;
 		
 		}
-		public List <Pessoa> editarPessoa(List<Pessoa> pessoas) {
+		public static List <Pessoa> editarPessoa(List<Pessoa> pessoas) {
 	   		
 	   		Pessoa pessoa = new Pessoa();
 	   		listarPessoas(pessoas);
@@ -326,13 +322,43 @@ public class PessoaController {
 		
 		}
 	 	
-	 	public void primerio() {
-	 	System.out.printf("----MENU----");
+	 	public void menu1(List<Pessoa> pessoas) {
+	 	System.out.println("----MENU----");
 		System.out.println("1)Cadastrar Pessoa");	
 		System.out.println("2)Listar pessoas cadastrados");
 		System.out.println("3)Editar pessoas");
 		System.out.println("4)Excluir pessoa");
 		
+	
+		System.out.println("Informe a opção desejada: ");
+		int opcao = tec.nextInt();
+		switch (opcao) {
+	
+				case 1:
+					pessoas.add(cadastrarPessoa());
+					break;
+				case 2:
+					listarPessoas(pessoas);
+					break;
+				case 3:
+					editarPessoa(pessoas);
+					break;
+				case 4:
+					excluirPessoa(pessoas);
+					break;
+				default:
+					System.out.println("Opção ivalida");
+					break;
+				}
+			
+			System.out.println("Sistema finalizado!!");
+		}
+
+			
+		}		
 		
-	 	}
-}
+	
+
+
+		
+
